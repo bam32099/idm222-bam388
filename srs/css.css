@@ -2,6 +2,21 @@
   box-sizing: border-box;
 }
 
+
+h1{font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+
+  letter-spacing: 3px;
+}
+
+
+div.col-9 p { font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;}
+
+div.par p { text-align: left;
+  font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;}
+
+
+
+
 .row::after {
   content: "";
   clear: both;
@@ -25,6 +40,22 @@
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+
+
+@media screen and (max-width: 500px){
+
+  h1{font-family: "Courier New","Courier", monospace;
+
+    letter-spacing: 1px;
+  }
+  img.homeimgs {
+ 
+     max-width: 100%;
+     max-height: 100%;
+   }
+
+
+}
 
 @media screen and (min-width: 1000px) {
     .col-9 h1 {
@@ -57,17 +88,29 @@
     padding-left: 15px;
   }
 
+img.homeimgs {
+ transition: all .2s ease-in-out; 
+  max-width: 50%;
+  max-height: 50%;
+  position: relative;
+  left: 13vw;
 
-
-
-
-
-
-html {
-  font-family: "Lucida Sans", sans-serif;
+}
+.homeimgs:hover { transform: scale(1.2); 
+  border: 0px solid rgb(0, 0, 0);
+  outline-style: solid;
+  outline-color: rgb(255, 255, 255);
+  z-index: 10;
 }
 
+html {
+  font-family: "Lucida Sans", "Lucida Sans Unicode", sans-serif;
+  background-color: rgba(218, 237, 255, 0.479);
+}
+
+
 .header {
+  border-radius: 1rem;
   background-color: #535353;
   color: #ffffff;
   padding: 15px;
@@ -91,34 +134,47 @@ justify-content: flex-start;
 }
 
 a:link, a:visited {
-  background-color: #1f0679;
+  background-color:  #000066;
   color: white;
   padding: 20px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  border-radius: 25px;
 }
 
 li{ padding-bottom: 15px;
   font-size: 4vw;
 }
 
+
+@media screen and (max-width: 500px){
+  a:link, a:visited{
+    padding: 2rem .75rem;
+}}
+
 @media screen and (min-width: 600px){
 li{ font-size: 3vw; }}
 
 
 a:hover, a:active {
-  background-color: #33a3e4;
+  background-color:  #0066ff;
 }
 
 
 @media screen and (min-width: 1000px) {
   a:link, a:visited {
-    padding: 30px 45px;
+    padding: 32px 45px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-  }
+    display: inline-block; }
+
+    .homeimgs:hover { transform: scale(1); 
+      border: 0px solid rgb(0, 0, 0);
+      outline-style: solid;
+      outline-color: rgb(255, 255, 255);
+    }
+    
 }
 
 @media screen and (min-width: 1000px) {
@@ -144,8 +200,12 @@ div.cell source {
  
 }
 
-@media screen and (min-width: 1000px) {
-  
+@media screen and (max-width: 999px) {
+  .cell {
+max-width: 50%;
+max-height: 50%;
+
+  }
 }
 
 
@@ -155,9 +215,11 @@ div.cell source {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+  
   }
   .cell {
     width: 50%;
+   
   }
 }
 
