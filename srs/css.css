@@ -90,10 +90,10 @@ div.par p { text-align: left;
 
 img.homeimgs {
  transition: all .2s ease-in-out; 
-  max-width: 50%;
+  max-width: 60%;
   max-height: 50%;
-  position: relative;
-  left: 13vw;
+
+  margin-left: 13vw;
 
 }
 .homeimgs:hover { transform: scale(1.2); 
@@ -146,6 +146,32 @@ a:link, a:visited {
 li{ padding-bottom: 15px;
   font-size: 4vw;
 }
+
+@media screen and (max-width: 560px){
+a.linkcontact {
+  margin-top: .5rem;
+}
+}
+
+
+
+#redbubblelink {
+background-color: #660f00;
+font-weight: bold;}
+
+#redbubblelink:hover {background-color: red;
+color: black;
+}
+
+
+#instalink {
+  background: 
+  linear-gradient( #400080, transparent), 
+  linear-gradient( 
+    200deg, #d047d1, #ff0000,    #ffff00);
+    font-weight: bold;
+}
+
 
 
 @media screen and (max-width: 500px){
